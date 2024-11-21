@@ -24,7 +24,7 @@ Further investigation revealed that the file exhibited ransomware behavior. This
 - **File Size:** 775.50 KB  
 - **Device Action:** Allowed  
 
-![Event Alert Screenshot](./screenshots/event_alert.png)  
+![Event Alert Screenshot](./screenshots/event_alert.PNG)  
 *Screenshot of the Event Alert from LETSDEFEND SIEM.*
 
 ---
@@ -45,7 +45,7 @@ We searched for network logs around the time of the alert to check for any exter
 
 This suggests that while the ransomware executed locally, it may not have attempted to contact a remote server.  
 
-![Log Management Screenshot](./screenshots/log_management.png)  
+![Log Management Screenshot](./screenshots/log_management.PNG)  
 *Screenshot showing the log management investigation.*
 
 ---
@@ -62,7 +62,7 @@ Details of the infected endpoint:
 
 The endpoint was analyzed for any changes or suspicious behavior.  
 
-![Endpoint Info Screenshot](./screenshots/endpoint_info.png)  
+![Endpoint Info Screenshot](./screenshots/endpoint_info.PNG)  
 *Screenshot of the endpoint information.*  
 
 ---
@@ -72,12 +72,12 @@ The endpoint’s process history revealed:
 - Execution of `ab.exe`, leading to the spawning of several processes like `rundll32.exe` and `ShadowCopy.exe`.  
 - Disabling of **shadow copy** and recovery settings (a common tactic used by ransomware to prevent file recovery).  
 
-![Malicious File Process Screenshot](./screenshots/malicious_file_process.png)  
+![Malicious File Process Screenshot](./screenshots/malicious_file_process.PNG)  
 *Screenshot of the process history showing the execution of `ab.exe`.*  
 
 Additionally, several other suspicious processes were observed after the malicious file executed.  
 
-![Other Suspicious Processes Screenshot](./screenshots/suspicious_processes.png)  
+![Other Suspicious Processes Screenshot](./screenshots/suspicious_processes.PNG)  
 *Screenshot of suspicious processes post-execution.*
 
 ---
@@ -88,7 +88,7 @@ Additionally, several other suspicious processes were observed after the malicio
 The file hash (`0b486fe0503524cfe4726a4022fa6a68`) was analyzed on **VirusTotal**.  
 - Most security vendors flagged it as ransomware.  
 
-![VirusTotal Screenshot](./screenshots/virustotal_analysis.png)  
+![VirusTotal Screenshot](./screenshots/virustotal_analysis.PNG)  
 *Screenshot of VirusTotal analysis showing ransomware classification.*  
 
 #### **b. Hybrid Analysis**  
@@ -97,7 +97,7 @@ Analysis on **Hybrid Analysis** revealed the following behaviors:
 - Spawning multiple processes to maintain persistence.  
 - Modifying files, including ransom notes.  
 
-![Hybrid Analysis Screenshot](./screenshots/hybrid_analysis.png)  
+![Hybrid Analysis Screenshot](./screenshots/hybrid_analysis.PNG)  
 *Screenshot of Hybrid Analysis report.*  
 
 #### **c. Any.Run Sandbox Analysis**  
@@ -106,10 +106,10 @@ The file was executed in the **Any.Run** sandbox, where detailed behaviors were 
 - Brief instances of PowerShell execution were noted.  
 - A ransom note file (`UZIZ8_readme_text`) was created, warning that files were encrypted.  
 
-![Any.Run Screenshot 1](./screenshots/anyrun_1.png)  
-![Any.Run Screenshot 2](./screenshots/anyrun_2.png)  
-![Any.Run Screenshot 3](./screenshots/anyrun_3.png)  
-![Any.Run Screenshot 4](./screenshots/anyrun_4.png)  
+![Any.Run Screenshot 1](./screenshots/anyrun_1.PNG)  
+![Any.Run Screenshot 2](./screenshots/anyrun_2.PNG)  
+![Any.Run Screenshot 3](./screenshots/anyrun_3.PNG)  
+![Any.Run Screenshot 4](./screenshots/anyrun_4.PNG)  
 *Screenshots of Any.Run sandbox analysis results.*
 
 ---
